@@ -6,12 +6,14 @@ function countFroyoFlavors(froyoFlavors) {
     const flavors = froyoFlavors.split(',');
 
     const flavorCounts = {};
-    flavors.forEach(flavor => {
-        flavor = flavor.trim();
+    for (let i = 0; i < flavors.length; i++) {
+        let flavor = flavors[i].trim();
         flavorCounts[flavor] = (flavorCounts[flavor] || 0) + 1;
-});
+
+};
 
 return flavorCounts;
+
 }
 
 const result = countFroyoFlavors(user);
